@@ -1,0 +1,112 @@
+/* =========================
+   HEADER
+   ========================= */
+
+   .site-header {
+    width: 100%;
+    background-color: var(--color-white);
+
+}
+
+.header-inner {
+    width: 100%;
+    min-height: 98px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    padding-inline: 48px;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    width: fit-content;
+
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+
+    color: var(--color-text);
+}
+
+.logo-mark {
+    font-size: 17px;
+    line-height: 1;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.main-nav a {
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+
+    color: var(--color-text);
+
+    transition: opacity 150ms ease;
+}
+
+.main-nav a:hover {
+    opacity: 0.55;
+}
+
+
+/* =========================
+   RESUME
+   ========================= */
+
+.resume-link {
+    justify-self: end;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+
+    color: var(--color-text);
+
+    transition: opacity 150ms ease;
+}
+
+.resume-link:hover {
+    opacity: 0.55;
+}
+
+.resume-icon {
+    width: 17px;
+    height: 17px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid currentColor;
+    border-radius: 50%;
+
+    font-size: 13px;
+    font-weight: 300;
+}

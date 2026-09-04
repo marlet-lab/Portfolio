@@ -1,3 +1,9 @@
+---
+import "../styles/global.css";
+import "../styles/typography.css";
+import "../styles/components.css";
+---
+
 <html>
     <head>
         <meta charset="utf-8" />
@@ -9,24 +15,26 @@
     </head>
 
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/about">Abut</a>
-                    </li>
-                    <li>
-                        <a href="/contact">CV & Contact</a>
-                    </li>
-                </ul>
-            </nav>
+        <header class="site-header">
+            <div class="header-inner">
+                <a href="/" class="logo"> 
+                    <span class="logo-mark">*</span>
+                    <span>LETHS-GO™</span>
+                </a>
 
+                <nav class="main-nav" aria-label="Main Navigation">
+                    
+                    <a href="/">HOME</a>
+                    <a href="/about">ABOUT</a>
+                    <a href="/contact">CV & CONTACT</a>
+                </nav>
+
+                <a href="/resume.pdf" class="resume-link" target="_blank">
+                    <span class="resume-icon">+</span>
+                    <span>RESUME [PDF]</span> 
+                </a>
+            </div>
         </header>
-
-        <h1>Header</h1>
     </body>
 </html>
 
