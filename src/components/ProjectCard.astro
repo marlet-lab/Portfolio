@@ -1,5 +1,45 @@
 ---
-import "../styles/global.css";
-import "../styles/typography.css";
-import "../styles/components.css";
+interface Props {
+    title: string;
+    description: string;
+    image: string;
+    href: string;
+}
+
+const { title, description, image, href } = Astro.props;
 ---
+
+<article class="project-card">
+
+    <a href={href} class="project-image-link">
+        <img
+            src={image}
+            alt={title}
+            class="project-image"
+            loading="lazy"
+        />
+    </a>
+
+    <div class="project-info">
+
+        <div class="project-text">
+            <h3 class="project-title">
+                {title}
+            </h3>
+
+            <p class="project-meta">
+                {description}
+            </p>
+        </div>
+
+        <a
+            href={href}
+            class="project-arrow"
+            aria-label={`View ${title}`}
+        >
+            →
+        </a>
+
+    </div>
+
+</article>

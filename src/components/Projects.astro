@@ -1,0 +1,31 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import { projects } from "../data/projects";
+---
+
+<section class="projects" id="work">
+    <div class="container">
+        <div class="projects-header">
+            <h2>Recent Works</h2>
+            <a href="/projects" class="see-all">
+                <span>See All</span>
+                <span class="see-all-arrow">→</span>
+            </a>
+
+        </div>
+
+        <div class="projects-list">
+            {projects.slice(0, 4).map((project: any) => ( 
+                <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    image={project.image}
+                    href={project.href}
+                />
+            ))}
+        </div>
+
+
+
+    </div>
+</section>
