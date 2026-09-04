@@ -1,7 +1,10 @@
 ---
 import Home from '../components/Home.astro';
 import Header from '../components/Header.astro';
-import Layout from '../layouts/Layout.astro';
+
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+
 import "../styles/global.css";
 import "../styles/typography.css";
 import "../styles/components.css";
@@ -9,29 +12,6 @@ import "../styles/components.css";
 ---
 
 <Layout>
-	<div class="content">
-		<h2>Welcome</h2>
-		<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolore sequi in cumque deleniti ea pariatur praesentium doloremque quia. Deleniti.</p>
-		<a href="/about"> CV & Contact</a>
-	</div>
+	<Hero />
 </Layout>
 
-<style>
-	.content{
-		text-align: center;
-	}
-	a {
-		display: inline-block;
-		background-color: blueviolet;
-		text-decoration: none;
-		color: #782929;
-		padding: 6px 10px;
-		border-radius: 2px;
-		margin-top: 20px;
-	}
-	a:hover {
-		background-color: #782929;
-		color: white;
-	}
-
-</style>
