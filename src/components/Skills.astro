@@ -1,0 +1,105 @@
+---
+const skills = [
+    {
+        name: "Javascript",
+        icon: "/icons/javascript.svg"
+    },
+    {
+        name: "Typescript",
+        icon: "/icons/typescript.svg"
+    },
+    {
+        name: "React",
+        icon: "/icons/react.svg"
+    },
+    {
+        name: "Next.js",
+        icon: "/icons/nextjs.svg"
+    },
+    {
+        name: "Node.js",
+        icon: "/icons/nodejs.svg"
+    },
+    {
+        name: "Express.js",
+        icon: "/icons/express.svg"
+    },
+    {
+        name: "Nest.js",
+        icon: "/icons/nestjs.svg"
+    },
+    {
+        name: "Socket.io",
+        icon: "/icons/socketio.svg"
+    },
+    {
+        name: "Figma",
+        icon: "/icons/figma.svg"
+    },
+    {
+        name: "Tailwind",
+        icon: "/icons/tailwind.svg"
+    }
+];
+---
+
+<section class="skills">
+
+    <div class="container">
+
+        <div class="skills-header">
+
+            <span class="skills-label">
+                Skills
+            </span>
+
+            <p class="skills-description">
+                The skills, tools and technologies used in my projects:
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="skills-marquee">
+
+        <div class="skills-track">
+
+            {skills.map((skill) => (
+                <div class="skill">
+
+                    <img
+                        src={skill.icon}
+                        alt=""
+                        class="skill-icon"
+                    />
+
+                    <span class="skill-name">
+                        {skill.name}
+                    </span>
+
+                </div>
+            ))}
+
+            {skills.map((skill) => (
+                <div class="skill" aria-hidden="true">
+
+                    <img
+                        src={skill.icon}
+                        alt=""
+                        class="skill-icon"
+                    />
+
+                    <span class="skill-name">
+                        {skill.name}
+                    </span>
+
+                </div>
+            ))}
+
+        </div>
+
+    </div>
+
+</section>
