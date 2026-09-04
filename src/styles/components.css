@@ -663,3 +663,246 @@
 }
 
 
+/* =========================
+   EXPERIENCES
+   ========================= */
+
+   .experiences {
+    padding-block: 80px 120px;
+}
+
+.experiences-title {
+    margin: 0 0 80px;
+
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   EXPERIENCE ITEM
+   ========================= */
+
+.experience-item {
+    border-bottom: 1px solid #bdbdbd;
+}
+
+.experience-item:first-child {
+    border-top: 1px solid #bdbdbd;
+}
+
+
+/* =========================
+   EXPERIENCE ROW
+   ========================= */
+
+.experience-row {
+    display: grid;
+
+    grid-template-columns:
+        56px
+        minmax(280px, 1fr)
+        minmax(250px, 1fr)
+        56px;
+
+    align-items: center;
+
+    min-height: 100px;
+
+    column-gap: 16px;
+}
+
+
+/* =========================
+   NUMBER
+   ========================= */
+
+.experience-number {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* =========================
+   TITLE
+   ========================= */
+
+.experience-title {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+
+    transition: color 150ms ease;
+}
+
+
+/* =========================
+   META
+   ========================= */
+
+.experience-meta {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================
+   TOGGLE
+   ========================= */
+
+.experience-toggle {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #bdbdbd;
+    border-radius: 50%;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-family: var(--font-body);
+    font-size: 28px;
+    font-weight: 300;
+
+    transition:
+        background-color 200ms ease,
+        color 200ms ease,
+        border-color 200ms ease;
+}
+
+.experience-plus {
+    display: block;
+
+    line-height: 1;
+
+    transition: transform 200ms ease;
+}
+
+
+/* =========================
+   DETAILS
+   ========================= */
+
+.experience-details {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 36px;
+
+    max-height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        max-height 400ms ease,
+        opacity 250ms ease,
+        padding 400ms ease;
+
+    padding: 0 72px 0 112px;
+}
+
+
+/* =========================
+   IMAGE
+   ========================= */
+
+.experience-image img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 1.4 / 1;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+}
+
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+
+.experience-description {
+    align-self: center;
+}
+
+.experience-description p {
+    margin: 0 0 28px;
+
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================
+   TAGS
+   ========================= */
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.experience-tag {
+    padding: 8px 24px;
+
+    border: 1px solid #999;
+    border-radius: 999px;
+
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+/* =========================
+   OPEN STATE
+   ========================= */
+
+.experience-item.is-open .experience-details {
+    max-height: 500px;
+
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    opacity: 1;
+}
+
+.experience-item.is-open .experience-toggle {
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+    border-color: var(--color-black);
+}
+
+.experience-item.is-open .experience-plus {
+    transform: rotate(45deg);
+}
+
+.experience-item.is-open .experience-title {
+    color: #3195ed;
+}

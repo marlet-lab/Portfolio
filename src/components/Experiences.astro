@@ -1,5 +1,71 @@
 ---
-import "../styles/global.css";
-import "../styles/typography.css";
-import "../styles/components.css";
+import { experiences } from "../data/experiences";
+import ExperienceItem from "./ExperienceItem.astro";
 ---
+
+<section class="experiences">
+
+    <div class="container">
+
+        <h2 class="experiences-title">
+            Experiences
+        </h2>
+
+        <div class="experiences-list">
+
+            {experiences.map((experience) => (
+                <ExperienceItem
+                    number={experience.number}
+                    title={experience.title}
+                    company={experience.company}
+                    period={experience.period}
+                    description={experience.description}
+                    image={experience.image}
+                    tags={experience.tags}
+                />
+            ))}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+    const items = document.querySelectorAll(".experience-item");
+
+    items.forEach((item) => {
+
+        const button = item.querySelector(".experience-toggle");
+
+        button?.addEventListener("click", () => {
+
+            const isOpen = item.classList.contains("is-open");
+
+            // Close all
+            items.forEach((otherItem) => {
+                otherItem.classList.remove("is-open");
+
+                const otherButton =
+                    otherItem.querySelector(".experience-toggle");
+
+                otherButton?.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+            });
+
+            // Open clicked item
+            if (!isOpen) {
+                item.classList.add("is-open");
+
+                button.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+            }
+        });
+
+    });
+</script>

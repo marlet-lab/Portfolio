@@ -1,0 +1,81 @@
+---
+interface Props {
+    number: string;
+    title: string;
+    company: string;
+    period: string;
+    description: string;
+    image?: string;
+    tags: string[];
+}
+
+const {
+    number,
+    title,
+    company,
+    period,
+    description,
+    image,
+    tags
+} = Astro.props;
+---
+
+<article class="experience-item">
+
+    <div class="experience-row">
+
+        <span class="experience-number">
+            {number}
+        </span>
+
+        <h3 class="experience-title">
+            {title}
+        </h3>
+
+        <span class="experience-meta">
+            {company} · {period}
+        </span>
+
+        <button
+            class="experience-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-label={`Show information about ${title}`}
+        >
+            <span class="experience-plus">+</span>
+        </button>
+
+    </div>
+
+
+    <div class="experience-details">
+
+        {image && (
+            <div class="experience-image">
+                <img
+                    src={image}
+                    alt=""
+                    loading="lazy"
+                />
+            </div>
+        )}
+
+        <div class="experience-description">
+
+            <p>
+                {description}
+            </p>
+
+            <div class="experience-tags">
+                {tags.map((tag) => (
+                    <span class="experience-tag">
+                        {tag}
+                    </span>
+                ))}
+            </div>
+
+        </div>
+
+    </div>
+
+</article>
