@@ -6,5 +6,29 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<Header />
+	<div class="content">
+		<h2>Welcome</h2>
+		<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolore sequi in cumque deleniti ea pariatur praesentium doloremque quia. Deleniti.</p>
+		<a href="/about">Get to know more about me!</a>
+	</div>
 </Layout>
+
+<style>
+	.content{
+		text-align: center;
+	}
+	a {
+		display: inline-block;
+		background-color: blueviolet;
+		text-decoration: none;
+		color: #782929;
+		padding: 6px 10px;
+		border-radius: 2px;
+		margin-top: 20px;
+	}
+	a:hover {
+		background-color: #782929;
+		color: white;
+	}
+
+</style>
