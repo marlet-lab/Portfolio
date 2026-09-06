@@ -2,6 +2,8 @@
 import Home from '../components/Home.astro';
 import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
+import HeroAbout from "../components/HeroAbout.astro";
+
 import "../styles/global.css";
 import "../styles/typography.css";
 import "../styles/components.css";
@@ -9,11 +11,6 @@ import "../styles/components.css";
 ---
 
 <Layout>
-	<div class="content">
-        <h2>About</h2>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ex veniam consequatur? Ut ullam, facere rem quibusdam voluptate sed est provident officiis molestiae quisquam repellat quas alias impedit obcaecati accusamus! </p>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ex veniam consequatur? Ut ullam, facere rem quibusdam voluptate sed est provident officiis molestiae quisquam repellat quas alias impedit obcaecati accusamus! </p>
-        
-    </div>
+    <HeroAbout />
     
 </Layout>

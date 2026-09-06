@@ -1,5 +1,5 @@
-<section class="hero">
-    <div class="hero-content">
+<section class="hero-about">
+    <div class="hero-content"> 
 
         <p class="hero-title" id="hero-title">
             <span class="typing-text"></span>
@@ -24,13 +24,13 @@
                 <span>SEE WORK</span>
             </a>
 
-        </div>
+        </div> 
+    </div> 
 
-    </div>
 </section>
 
 <script>
-    const text = "Maria Leth - Software & Design Engineer. Scroll down to see my work :)";
+    const text1 = "Hello, I'm Maria. ";
     const element = document.querySelector(".typing-text") as HTMLElement;
     const cursor = document.querySelector(".typing-cursor") as HTMLElement;
 
@@ -38,8 +38,8 @@
     let index = 0;
 
     function typeText() {
-        if (index < text.length) {
-            element.textContent += text.charAt(index);
+        if (index < text1.length) {
+            element.textContent += text1.charAt(index);
             index++;
 
             setTimeout(typeText, 50);
