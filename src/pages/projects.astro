@@ -1,12 +1,59 @@
 ---
-import "../styles/global.css";
-import "../styles/typography.css";
-import "../styles/components.css";
-import Header from '../components/Header.astro';
-import Layout from '../layouts/Layout.astro';
+
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import Footer from "../components/Footer.astro";
+
 
 ---
 
-<Layout>
-	<Header />
+<Layout title="Projects" >
+    <main class="projects-page" >
+
+
+        <section class="projects-page-header"> 
+            <p class="projects-label">
+                Selected work
+            </p>
+    
+        </section>
+
+        <section class="all-projects">
+
+            <ProjectCard
+                title="Project One"
+                description="UX / Development · 2026"
+                image="/images/project-1.jpg"
+                href="/projects/project-one"
+            />
+
+            <ProjectCard
+                title="Project Two"
+                description="Web Development · 2025"
+                image="/images/project-2.jpg"
+                href="/projects/project-two"
+            />
+
+            <ProjectCard
+                title="Project Three"
+                description="Interaction Design · 2025"
+                image="/images/project-3.jpg"
+                href="/projects/project-three"
+            />
+
+            <ProjectCard
+                title="Project Four"
+                description="Software Development · 2024"
+                image="/images/project-4.jpg"
+                href="/projects/project-four"
+            />
+
+        </section>
+
+    </main>
+    <Footer />
+
+
+
+
 </Layout>
