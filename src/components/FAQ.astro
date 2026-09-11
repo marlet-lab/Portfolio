@@ -1,0 +1,43 @@
+---
+import CardStack from "./CardStack.astro";
+---
+
+<section class="faq" id="faq">
+
+    <div class="faq-intro">
+
+        <h2>Questions</h2>
+
+        <p>
+            A few things you might want to know about me.
+        </p>
+
+    </div>
+
+
+    <div class="faq-stack">
+
+        <CardStack
+            cards={[
+                {
+                    question: "What are you studying?",
+                    answer: "I am currently studying at Umeå University, where I am pursuing a Master of Science in Civil Engineering with a specialization in Interaction, Technology & Design. I am also completing Bachelor's degrees in Computer Science and Media Technology."
+                },
+                {
+                    question: "What do you enjoy working with?",
+                    answer: "I enjoy working where technology and design meet. I particularly like frontend development, interaction design and creating digital experiences that are both functional and visually engaging."
+                },
+                {
+                    question: "What inspires your work?",
+                    answer: "I am inspired by people, new environments and the combination of creativity and technology. I enjoy exploring different perspectives and turning ideas into simple and useful digital experiences."
+                },
+                {
+                    question: "What are you looking for?",
+                    answer: "I am interested in opportunities where I can combine software development, design and problem solving. I enjoy learning new things and working with people who are passionate about what they do."
+                }
+            ]}
+        />
+
+    </div>
+
+</section>

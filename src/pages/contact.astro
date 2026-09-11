@@ -1,0 +1,160 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+
+---
+
+
+<Layout title="CV & Contact" pageClass="dark-page">
+    
+    <main class="contact-page">
+
+        <section class="contact-hero">
+            <!-- <p class="contact-eyebrow">
+                CV & Contact
+            </p> -->
+            <!-- <h1>
+                Let's work<br /> 
+                together.
+            </h1>
+            <p class="contact-intro-text">
+                I'd love to hear from you. Wheter you have a project in mind, an opportunity or simply want to say hello. 
+            </p> -->
+        </section>
+
+        <section class="contact-grid">
+            <div class="contact-column">
+                <p class="section-label">
+                    CONTACT
+                </p>
+
+                <form class="contact-form" id="contact-form">
+                    <label for="name">
+                        Name
+                    </label>
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        required
+                    />
+
+                    <label for="email">
+                        Your email
+                    </label>
+
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                    />
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        SEND MESSAGE →
+                    </button>
+
+                </form>
+            </div>
+
+            <div class="cv-column">
+                <p class="section-label">
+                    CV
+                </p>
+
+                <div class="cv-card">
+                    <div class="cv-top">
+                        <span class="cv-number">
+                            01
+                        </span>
+                        <span class="cv-type">
+                            PDF
+                        </span>
+                    </div>
+
+                    <div class="cv-content">
+                        <h2>
+                            Maria Leth
+                        </h2>
+                        <p>
+                            Software & Design Engineer
+                        </p>
+                    </div>
+
+                    <a
+                        href="/cv/Maria-Leth-CV.pdf"
+                        download
+                        class="cv-download"
+                    >
+                    <span>
+                        DOWNLOAD CV
+                    </span>
+
+                    <span class="cv-arrow">
+                        ↗
+                    </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="email-section">
+            <p class="section-label">
+                OR JUST SAY HELLO
+            </p>
+            <a href="mailto:marialeth01@gmail.com"
+                class="email-link"
+            >
+            marialeth01@gmail.com
+            <span>↗</span>
+            </a>
+        </section>
+
+    </main>
+
+</Layout>
+
+<script>
+
+    const form = document.querySelector<HTMLFormElement>("#contact-form");
+
+    form?.addEventListener("submit",(event) => {
+        event.preventDefault();
+
+        const name = 
+            (document.querySelector("#name") as HTMLInputElement).value;
+
+        const email =
+            (document.querySelector("#email") as HTMLInputElement).value;
+
+        const message = 
+            (document.querySelector("#message") as HTMLInputElement).value;
+
+        const subject = encodeURIComponent (
+            `Portfolio contact from ${name}`
+        );
+
+        const body = encodeURIComponent (
+            `Name: ${name}\nEmail: ${email}\n\n${message}`
+        );
+
+        window.location.href = 
+        `mailto:marialeth01@gmail.com?subject=${subject}&body=${body}`;
+
+    }); 
+
+</script>
