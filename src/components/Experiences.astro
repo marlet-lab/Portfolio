@@ -43,7 +43,6 @@ import ExperienceItem from "./ExperienceItem.astro";
 
             const isOpen = item.classList.contains("is-open");
 
-            // Close all
             items.forEach((otherItem) => {
                 otherItem.classList.remove("is-open");
 
@@ -56,7 +55,6 @@ import ExperienceItem from "./ExperienceItem.astro";
                 );
             });
 
-            // Open clicked item
             if (!isOpen) {
                 item.classList.add("is-open");
 

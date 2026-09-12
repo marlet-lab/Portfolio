@@ -8,25 +8,108 @@
 
             <p>So basically I am free sole originally from Gothenburg,
                but now living in Umeå. During my adult years I’ve been
-               moving around a lot! I have studied business in Ohio (U.S)
+               
+               <br>
+               <br>
                , skiing for 5 months in Austria, moved to Umeå for university
                 and backpacking in southeast Asia. I could literally move wherever!
-                 I love to explore new places and foremost meet new people. I think
+                 I love to explore new places and foremost meet new people.
+                 <br>
+                 <br>
                  knowledge comes from communicating, talking with people and 
-                 exchange experiences. 
+                 exchange experiences. moving around a lot! I have studied business in Ohio (U.S)
+                 and backpacking in southeast Asia. I could literally move wherever!
+                 exchange experiences. moving around a lot! I have studied business in Ohio (U.S)
                  and backpacking in southeast Asia. I could literally move wherever!
                 
             </p>
         </div>      
 
-        <div class="about-img">
+        <!-- <div class="about-img">
             <img src="/images/hero-about.jpg" alt="About me" />
+        </div> -->
+        <div class="carousel">
+
+
+            <div class="carousel-track">
+    
+                <div class="slide">
+                    <img src="/images/segla.jpeg" alt="Profile Pic 1">
+                </div>
+    
+                <div class="slide">
+                    <img src="/images/vattenfall.jpeg" alt="Profile Pic 2">
+                </div>
+    
+                <div class="slide">
+                    <img src="/images/boat.jpeg" alt="Profile Pic 3">
+                </div>
+                <div class="slide">
+                    <img src="/images/bada.jpeg" alt="Profile Pic 3">
+                </div>
+    
+            </div>
+    
+            <div class="dots">
+                <button class="dot active"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+
+            </div>
+    
         </div>
+
+
 
 
     </div>
     <!-- <a href="#academic" class="about-scroll">
         <span>↓</span>
     </a> -->
+
+    <script>
+
+        const track = document.querySelector(".carousel-track");
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                slides[index].scrollIntoView ({
+                    behavior: "smooth",
+                    block: "nearest",
+                    inline: "start"
+                });
+
+            });
+
+        });
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if(entry.isIntersecting) {
+                        const index = Array.from(slides).indexOf(entry.target);
+                        dots.forEach((dot) => {
+                            dot.classList.remove("active");
+                        });
+                        dots[index].classList.add("active");
+                    }
+
+                });
+
+            },
+            {
+                root: track,
+                threshold: 0.6
+            }
+
+        );
+        slides.forEach((slide) => {
+            observer.observe(slide);
+        });
+
+    </script>
 
 </section>

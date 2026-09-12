@@ -1,0 +1,81 @@
+---
+
+--- 
+<body> 
+    <div class="carousel">
+
+
+        <div class="carousel-track">
+
+            <div class="slide">
+                <img src="/images/segla.jpeg" alt="Profile Pic 1">
+            </div>
+
+            <div class="slide">
+                <img src="/images/vattenfall.jpeg" alt="Profile Pic 2">
+            </div>
+
+            <div class="slide">
+                <img src="/images/boat.jpeg" alt="Profile Pic 3">
+            </div>
+            <div class="slide">
+                <img src="/images/indo.jpeg" alt="Profile Pic 4">
+            </div>
+
+        </div>
+
+        <div class="dots">
+            <button class="dot active"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const track = document.querySelector(".carousel-track");
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                slides[index].scrollIntoView ({
+                    behavior: "smooth",
+                    block: "nearest",
+                    inline: "start"
+                });
+
+            });
+
+        });
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if(entry.isIntersecting) {
+                        const index = Array.from(slides).indexOf(entry.target);
+                        dots.forEach((dot) => {
+                            dot.classList.remove("active");
+                        });
+                        dots[index].classList.add("active");
+                    }
+
+                });
+
+            },
+            {
+                root: track,
+                threshold: 0.6
+            }
+
+        );
+        slides.forEach((slide) => {
+            observer.observe(slide);
+        });
+
+    </script>
+
+</body>
