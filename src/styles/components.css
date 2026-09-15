@@ -2163,3 +2163,54 @@
 } 
 
 
+/* =========================
+   PROJECT sides
+   ========================= */
+
+
+.about-text {
+    margin-top: 80px;
+}
+
+.about-text p {
+    margin-bottom: 10px;
+    color:#5d5d61;
+    line-height: 1.8em;
+
+}
+
+.proj-info {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.tech-stack {
+    padding-left: 0px;
+}
+
+.timeline {
+    padding-right: 80px;
+}
+
+.overview {
+    margin-top: 40px;
+}
+
+.challenge {
+    margin-top: 40px;
+}
+
+.information {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.final-result {
+    margin-top: 40px;
+}

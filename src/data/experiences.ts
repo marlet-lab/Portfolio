@@ -6,7 +6,7 @@ export const experiences = [
         period: "2026 - ongoing",
         description:
             "Managing and developing web content for DataTjej, with a focus on communication, design and user experience.",
-        image: "/images/experience-datatjej.jpg",
+        image: "",
         tags: ["Web Development", "Content", "Design"],
     },
     {
