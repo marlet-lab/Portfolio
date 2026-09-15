@@ -9,10 +9,15 @@
         <div class="hero-bottom">
 
             <div class="hero-time">
+
                 <span class="status-dot"></span>
-                <span>03:15:57</span>
-                <span class="timezone">[ GMT +1 ]</span>
+                <span id="clock">00:00:00</span>
+                <span class="timezone">[ STOCKHOLM]</span>
+
             </div>
+
+
+
 
             <div class="hero-socials">
                 <a href="#" target="_blank">[ LINKEDIN ]</a>
@@ -30,6 +35,25 @@
 </section>
 
 <script>
+    const clock = document.querySelector("#clock");
+
+    function updateClock() {
+        if (!clock) return;
+
+        const time = new Intl.DateTimeFormat("sv-SE", {
+            timeZone: "Europe/Stockholm",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: false
+        }).format(new Date());
+        clock.textContent = time;
+    }
+    updateClock();
+
+    setInterval(updateClock, 1000);
+
+
     const text = "Maria Leth - Software & Design Engineer.";
     const element = document.querySelector(".typing-text") as HTMLElement;
     const cursor = document.querySelector(".typing-cursor") as HTMLElement;
