@@ -1,7 +1,7 @@
 export const projects = [
     {
-        title: "Prototyping and Research (report)",
-        description: "Mobile App Design",
+        title: "Navigation & Usability Study",
+        description: "UX Research · Prototyping · Usability Testing",
         image: "/images/project-1.jpg",
         href: "/projects/project-one"
     },

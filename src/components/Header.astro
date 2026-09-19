@@ -9,35 +9,102 @@ import "../styles/components.css";
         <meta charset="utf-8" />
         <title>Header</title>
         <meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
     </head>
 
     <body>
+
         <header class="site-header">
             <div class="header-inner">
 
-                <a href="/" class="logo"> 
+                <a href="/" class="logo">
                     <span class="logo-mark">*</span>
                     <span>LETHS-GO™</span>
                 </a>
 
+
                 <nav class="main-nav" aria-label="Main Navigation">
-                    
                     <a href="/">HOME</a>
                     <a href="/about">ABOUT</a>
                     <a href="/contact">CONTACT</a>
-
                 </nav>
 
                 <a href="/resume.pdf" class="resume-link" target="_blank">
                     <span class="resume-icon">+</span>
-                    <span>RESUME [PDF]</span> 
+                    <span>RESUME [PDF]</span>
                 </a>
-                
+
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                </button>
+
             </div>
         </header>
+
+
+        <!-- Mobile navigation -->
+        <nav class="mobile-nav" aria-label="Mobile Navigation" aria-hidden="true">
+
+            <a href="/">HOME</a>
+            <a href="/about">ABOUT</a>
+            <a href="/contact">CONTACT</a>
+
+            <a href="/resume.pdf" target="_blank">
+                RESUME [PDF]
+            </a>
+
+        </nav>
+
+
+        <script>
+            const menuToggle = document.querySelector(".menu-toggle");
+            const mobileNav = document.querySelector(".mobile-nav");
+
+            menuToggle?.addEventListener("click", () => {
+
+                const isOpen = document.body.classList.toggle("menu-open");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    String(isOpen)
+                );
+
+                mobileNav?.setAttribute(
+                    "aria-hidden",
+                    String(!isOpen)
+                );
+            });
+
+
+            // Close menu when clicking a link
+            mobileNav?.querySelectorAll("a").forEach((link) => {
+
+                link.addEventListener("click", () => {
+
+                    document.body.classList.remove("menu-open");
+
+                    menuToggle?.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    mobileNav?.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+                });
+
+            });
+        </script>
+
     </body>
 </html>
-

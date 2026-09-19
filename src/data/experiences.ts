@@ -16,7 +16,7 @@ export const experiences = [
         period: "2024 - 2025",
         description:
             "Weekly mentoring sessions introducing highschool students to programming. Built small ground Python and web basics, and ran hands-on workshops where everyone could participate.",
-        image: "/images/event-datatjej.jpg",
+        image: "",
         tags: ["Teaching", "Event Planning", "Communication"],
     },
     {

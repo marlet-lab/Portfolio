@@ -7,22 +7,23 @@ import Footer from "../components/Footer.astro";
 
 ---
 
-<Layout title="Projects" >
+<Layout title="Projects" pageClass="projects-page">
     <main class="projects-page" >
 
 
         <section class="projects-page-header"> 
             <p class="projects-label">
-                Selected work
+                arrow back
             </p>
+            <h2>Selected Work</h2>
     
         </section>
 
         <section class="all-projects">
 
             <ProjectCard
-                title="Project One"
-                description="UX / Development · 2026"
+                title="Navigation & Usability Testing"
+                description="UX Research · Prototyping · Usability Testing "
                 image="/images/project-1.jpg"
                 href="/projects/project-one"
             />
@@ -47,6 +48,15 @@ import Footer from "../components/Footer.astro";
                 image="/images/project-4.jpg"
                 href="/projects/project-four"
             />
+
+            <ProjectCard
+            title="Project Four"
+            description="Software Development · 2024"
+            image="/images/project-4.jpg"
+            href="/projects/project-four"
+            />
+
+
 
         </section>
 
