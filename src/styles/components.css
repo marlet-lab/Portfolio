@@ -341,7 +341,7 @@
     border-radius: 12px;
     font-family: var(--font-display);
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
     transition: transform 150ms ease,
         opacity 150ms ease;
 }
@@ -417,6 +417,13 @@
     color: rgb(163, 161, 161);
 }
 
+.project-video {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 22px;
+}
 
 /* =====================================================
    PROJECT REPORT BUTTON
@@ -429,9 +436,9 @@
     padding: 11px 14px 11px 18px;
     margin-bottom: 20px;
     margin-top: 40px;
-    background: #285b9f;
+    background: #000000;
     color: white;
-    border: 1px solid #285b9f;
+    border: 1px solid #a6a6a6;
     border-radius: 100px;
     font-family: var(--font-body);
     font-size: 11px;
@@ -456,12 +463,55 @@
 }
 
 .report-button:hover {
-    background: white;
-    color: #1f4f8f;
+    background: rgb(243, 241, 241);
+    color: #080808;
     transform: translateY(-2px);
 }
 
 .report-button:hover .report-arrow {
+    transform: translate(2px, -2px);
+}
+
+.report-button-1 {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 11px 14px 11px 18px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    background: #ffffff;
+    color: rgb(32, 31, 31);
+    border: 1px solid #d6d6d6;
+    border-radius: 100px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: background-color 200ms ease,
+        color 200ms ease,
+        transform 200ms ease;
+}
+
+.report-arrow-1 {
+    width: 23px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #285b9f;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.report-button-1:hover {
+    background: rgb(22, 22, 22);
+    color: #f4f4f4;
+    transform: translateY(-2px);
+}
+
+.report-button-1:hover .report-arrow {
     transform: translate(2px, -2px);
 }
 
@@ -473,6 +523,31 @@
 /* =====================================================
    PROJECT CARDS
    ===================================================== */
+   .project-image-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   }
+   .project-image-1 img {
+    width: 60%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+   }
+
+   .project-image-2 {
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+   }
+
+   .project-image-2 img {
+    width: 40%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+   }
+
 
 .project-image-link {
     display: block;
@@ -1084,6 +1159,25 @@
 }
 
 .academic-text p {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.academic-text-1 {
+    max-width: 1100px;
+    margin-top: 30px;
+}
+
+.academic-text-1 h1 {
+    margin: 0 0 20px;
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.academic-text-1 p {
     margin: 0;
     font-family: var(--font-body);
     font-size: 16px;

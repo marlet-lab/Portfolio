@@ -2,7 +2,7 @@ export const experiences = [
     {
         number: "01",
         title: "Web Editor",
-        company: "Code for DataTjej",
+        company: "DataTjej",
         period: "2026 - ongoing",
         description:
             "Managing and developing web content for DataTjej, with a focus on communication, design and user experience.",
@@ -11,18 +11,28 @@ export const experiences = [
     },
     {
         number: "02",
+        title: "Custom Relation Manager",
+        company: "Uniaden",
+        period: "2026 - ongoing",
+        description:
+            "Responsible for maintaining relationships with partners/clients and acting as their main point of contact.",
+        image: "",
+        tags: ["Communication", "Marketing", "Teamwork"],
+    },
+    {
+        number: "02",
         title: "Event Coordinator",
-        company: "Events for DataTjej",
+        company: "DataTjej",
         period: "2024 - 2025",
         description:
-            "Weekly mentoring sessions introducing highschool students to programming. Built small ground Python and web basics, and ran hands-on workshops where everyone could participate.",
+            "Planned events for the non-profit organization DataTjej.",
         image: "",
-        tags: ["Teaching", "Event Planning", "Communication"],
+        tags: ["Event Planning", "Leadership", "Teamwork"],
     },
     {
         number: "03",
         title: "Head of Social Committee",
-        company: "Event for IndivId",
+        company: "IndivId",
         period: "2024 - 2025",
         description:
             "Planned and coordinated social activities and events together with the committee.",
@@ -31,11 +41,11 @@ export const experiences = [
     },
     {
         number: "04",
-        title: "Company Communicator",
+        title: "Custom Relation Manager",
         company: "Idag & Inatt",
         period: "2024 - 2025",
         description:
-            "Worked with communication and coordination within the company.",
+            "Responsible for maintaining relationships with partners/clients and acting as their main point of contact ",
         image: "",
         tags: ["Communication", "Marketing", "Teamwork"],
     },

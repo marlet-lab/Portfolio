@@ -25,45 +25,42 @@ import '@fontsource/alex-brush';
             </div>
 
 
-            <form class="contact-form">
+            <form class="contact-form" id="contact-form">
 
                 <label for="name">
                     Name
                 </label>
-
+            
                 <input
                     type="text"
                     id="name"
                     name="name"
                 />
-
-
+            
                 <label for="email">
                     Your email
                 </label>
-
+            
                 <input
                     type="email"
                     id="email"
                     name="email"
                 />
-
-
+            
                 <label for="message">
                     Message
                 </label>
-
+            
                 <textarea
                     id="message"
                     name="message"
                     rows="6"
                 ></textarea>
-
-
+            
                 <button type="submit">
                     Send message
                 </button>
-
+            
             </form>
 
 
@@ -84,3 +81,34 @@ import '@fontsource/alex-brush';
     </div>
 
 </section>
+
+<script>
+    const form = document.querySelector<HTMLFormElement>("#contact-form");
+
+    form?.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const name = (
+            document.querySelector("#name") as HTMLInputElement
+        ).value;
+
+        const email = (
+            document.querySelector("#email") as HTMLInputElement
+        ).value;
+
+        const message = (
+            document.querySelector("#message") as HTMLTextAreaElement
+        ).value;
+
+        const subject = encodeURIComponent(
+            `Portfolio contact from ${name}`
+        );
+
+        const body = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\n\n${message}`
+        );
+
+        window.location.href =
+            `mailto:marialeth01@gmail.com?subject=${subject}&body=${body}`;
+    });
+</script>

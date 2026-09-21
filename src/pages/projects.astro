@@ -12,14 +12,25 @@ import Footer from "../components/Footer.astro";
 
 
         <section class="projects-page-header"> 
-            <p class="projects-label">
-                arrow back
-            </p>
+
+            <div class="projects-label">
+                <a href="/">
+                    ← Back to homepage
+                </a>
+            </div>
+
             <h2>Selected Work</h2>
     
         </section>
 
         <section class="all-projects">
+
+            <ProjectCard
+            title="Portfolio 2026"
+            description="Frontend  · 2024"
+            image="/images/project-5.png"
+            href="/projects/project-five"
+            />
 
             <ProjectCard
                 title="Navigation & Usability Testing"
@@ -29,33 +40,29 @@ import Footer from "../components/Footer.astro";
             />
 
             <ProjectCard
-                title="Project Two"
+                title="PlateLoop"
                 description="Web Development · 2025"
-                image="/images/project-2.jpg"
+                image="/images/project-2.png"
                 href="/projects/project-two"
             />
 
             <ProjectCard
-                title="Project Three"
-                description="Interaction Design · 2025"
-                image="/images/project-3.jpg"
-                href="/projects/project-three"
-            />
-
-            <ProjectCard
-                title="Project Four"
-                description="Software Development · 2024"
-                image="/images/project-4.jpg"
-                href="/projects/project-four"
-            />
-
-            <ProjectCard
-            title="Project Four"
-            description="Software Development · 2024"
-            image="/images/project-4.jpg"
+            title="EPL"
+            description="Web Development · 2024"
+            image="/images/project-4.png"
             href="/projects/project-four"
             />
 
+            <ProjectCard
+                title="Hero Imaging"
+                description="Interaction Design · 2025"
+                image="/images/project-3.png"
+                href="/projects/project-three"
+            />
+
+          
+
+         
 
 
         </section>
